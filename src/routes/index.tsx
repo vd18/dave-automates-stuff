@@ -1,29 +1,44 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/portfolio/Navbar";
+import {
+  Hero, About, Skills, Services, Projects, Experience, Stack, Testimonials, Contact, Footer,
+} from "@/components/portfolio/sections";
+import { useReveal } from "@/hooks/use-reveal";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Dave Vandan — Marketing Automation & CRM Developer" },
+      { name: "description", content: "GoHighLevel Expert, CRM Automation Developer, and WordPress Specialist building marketing systems that automate lead generation, onboarding, and sales pipelines." },
+      { property: "og:title", content: "Dave Vandan — Marketing Automation & CRM Developer" },
+      { property: "og:description", content: "GoHighLevel, CRM automation, funnels, and WordPress — automated growth systems for modern businesses." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" },
     ],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
+  useReveal();
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="relative min-h-screen overflow-x-hidden">
+      <Navbar />
+      <Hero />
+      <About />
+      <Skills />
+      <Services />
+      <Projects />
+      <Experience />
+      <Stack />
+      <Testimonials />
+      <Contact />
+      <Footer />
+    </main>
   );
 }
