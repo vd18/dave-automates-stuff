@@ -241,19 +241,51 @@ export function Services() {
 }
 
 /* ---------- PROJECTS ---------- */
-const projects = [
-  { t: "GoHighLevel Snapshot System", d: "Built reusable automation systems including funnels, workflows, pipelines, calendars, and onboarding processes.", tags: ["GoHighLevel", "Snapshots", "Workflows"], grad: "from-blue-500 to-indigo-600" },
-  { t: "Multi-Step Lead Nurturing Automation", d: "Created email, SMS, and voicemail campaigns that automatically nurture leads through every stage.", tags: ["Email", "SMS", "Voice"], grad: "from-cyan-500 to-blue-600" },
-  { t: "CRM Migration Project", d: "Migrated client data from WordPress-based systems to GoHighLevel CRM with zero data loss.", tags: ["CRM", "Migration", "WordPress"], grad: "from-violet-500 to-purple-600" },
-  { t: "Funnel & Appointment Booking System", d: "Designed complete sales funnel connected to automated appointment scheduling and reminders.", tags: ["Funnels", "Calendar", "Automation"], grad: "from-teal-500 to-emerald-600" },
-  { t: "N8N Workflow Automation", d: "Built self-hosted automation systems integrating multiple business platforms via custom nodes.", tags: ["N8N", "Self-hosted", "APIs"], grad: "from-orange-500 to-pink-600" },
-  { t: "WooCommerce Automation Integration", d: "Connected eCommerce stores with CRM systems and automated abandoned-cart follow-up campaigns.", tags: ["WooCommerce", "CRM", "eCom"], grad: "from-pink-500 to-rose-600" },
-  { t: "API & Webhook Integration Project", d: "Implemented real-time synchronization between CRMs and third-party applications via webhooks.", tags: ["APIs", "Webhooks", "Realtime"], grad: "from-amber-500 to-orange-600" },
+const IMG = "https://petersamuelagada.github.io/";
+type Cat = "all" | "landing" | "ghl" | "ai" | "funnel";
+
+const projects: { t: string; d: string; img: string; overlay: string; tag: string; cat: Exclude<Cat, "all">; results: { v: string; l: string }[] }[] = [
+  { t: "Concrete Construction Lead Gen Page — ISCHBA", d: "Full lead-gen landing page for a US concrete construction company — services showcase, 4-step process, free estimate form, and CRM automation built inside GoHighLevel.", img: IMG + "Mockup_Real_estate.jpg", overlay: "Construction", tag: "Construction — Lead Generation", cat: "landing", results: [{ v: "Lead", l: "Gen System" }, { v: "CRM", l: "Synced" }, { v: "5★", l: "Rating" }] },
+  { t: "Herbal Health Product Landing Page", d: "Full landing page for a premium herbal health brand — hero, product showcase, testimonials, FAQ, and conversion-optimized CTAs built inside GoHighLevel.", img: IMG + "mockup-herbal.jpg", overlay: "Landing Page", tag: "Health & Wellness", cat: "landing", results: [{ v: "GHL", l: "Built" }, { v: "Full", l: "Page Design" }, { v: "CRO", l: "Optimised" }] },
+  { t: "Restorative Health & Wellness Clinic", d: "Complete website for a health clinic — services, team profiles, testimonials, partner logos and a contact form with full GHL integration and automated follow-up.", img: IMG + "mockup-clinic.jpg", overlay: "Landing Page", tag: "Health & Wellness Clinic", cat: "landing", results: [{ v: "GHL", l: "Integrated" }, { v: "Auto", l: "Follow-up" }, { v: "Multi", l: "Section" }] },
+  { t: "All Cities Real Estate Agent Page", d: "Professional real estate landing page in GHL — property listings, partner logos (Zillow, Chase, RE/MAX), agent profiles, testimonials, and lead capture form with CRM sync.", img: IMG + "mockup-realestate.jpg", overlay: "Real Estate", tag: "Real Estate", cat: "landing", results: [{ v: "GHL", l: "Built" }, { v: "Lead", l: "Capture" }, { v: "CRM", l: "Synced" }] },
+  { t: "Mastering Photography Course — Scott Spencer", d: "Full course landing page in GHL — instructor bio, 6 modules, 3-tier pricing ($69/$99/$179), FAQ, and enrollment CTA. 1,000+ students enrolled.", img: IMG + "Photography%20Mockup.jpg", overlay: "Course Page", tag: "Education — Course Launch", cat: "landing", results: [{ v: "1,000+", l: "Students" }, { v: "300+", l: "Reviews" }, { v: "99%", l: "Satisfaction" }] },
+  { t: "AI Marketing Landing Page — Precision AI Growth", d: "Full landing page for an AI marketing agency — 24/7 AI answering agent offer, 4 AI service blocks, FAQ, and Google-verified testimonials. Built inside GoHighLevel.", img: IMG + "AIPRECIS_LANDING_PAGE_mockup.jpg", overlay: "AI Marketing", tag: "AI Marketing — Lead Generation", cat: "landing", results: [{ v: "AI", l: "Powered" }, { v: "24/7", l: "Agent" }, { v: "GHL", l: "Built" }] },
+  { t: "DNA Paternity Testing — PaternityLab.com", d: "Full landing page for a DNA testing lab — order CTA, 4 test types, accreditation badges, lab difference section, local facilities, and client reviews.", img: IMG + "PaternityLabLandingPageDesign_mockup.jpg", overlay: "Healthcare", tag: "Healthcare — DNA Testing", cat: "landing", results: [{ v: "99.99%", l: "Accuracy" }, { v: "4", l: "Test Types" }, { v: "5★", l: "Rating" }] },
+  { t: "Motorcycle Mastery Opt-in Page — Petrolhead", d: "Full lead-capture opt-in funnel — free $97 guide offer, 6 chapter previews, 38K subscriber social proof, testimonials, FAQ, and multi-CTA flow in GoHighLevel.", img: IMG + "OptinPageMotorcycle_Masterymockup.jpg", overlay: "Opt-in Page", tag: "Lead Generation — Opt-in Funnel", cat: "funnel", results: [{ v: "38K", l: "Subscribers" }, { v: "Free", l: "Lead Magnet" }, { v: "5★", l: "Rating" }] },
+  { t: "Coaching & Speaker Conference — Roventa 2025", d: "Complete event registration page — speaker profiles, 3-day schedule, tiered ticket pricing ($99/$199/$399), sponsor showcase, and testimonials in GoHighLevel.", img: IMG + "Mockup_coaches.jpg", overlay: "Event Page", tag: "Coaching & Events", cat: "landing", results: [{ v: "3-Day", l: "Schedule" }, { v: "Ticket", l: "Integrated" }, { v: "5★", l: "Rating" }] },
+  { t: "Blue Hawk Automation — Algorithmic Trading", d: "Full website for an Australia-based algo trading company — 5-way opportunity comparison, License & Funded Account services, case studies, team profiles, FAQ.", img: IMG + "bluehawkautomationmockup.jpg", overlay: "Algo Trading", tag: "Finance — Algorithmic Trading", cat: "landing", results: [{ v: "5", l: "Opportunity Types" }, { v: "🇦🇺", l: "Australia" }, { v: "5★", l: "Rating" }] },
+  { t: "Tiffany The Lender — Homeownership & Wealth", d: "Premium mortgage landing page — video-led hero, AI chatbot, qualified vs non-qualified mortgage products, family video testimonials, 8+ FAQ, pre-qualification CTA.", img: IMG + "Tiffany_landing%20page_Mockup.jpg", overlay: "Mortgage & Lending", tag: "Real Estate — Mortgage Lending", cat: "landing", results: [{ v: "AI", l: "Chatbot" }, { v: "2", l: "Product Types" }, { v: "5★", l: "Rating" }] },
+  { t: "Vital Virtuals — Healthcare VA Website", d: "Complete healthcare staffing website — HIPAA-compliant virtual scribes, 70% documentation time reduction, AI vs live scribe comparison, pricing, booking form.", img: IMG + "Vital_landing_page_Mockup.jpg", overlay: "Healthcare", tag: "Healthcare — Virtual Assistants", cat: "landing", results: [{ v: "70%", l: "Doc Time Saved" }, { v: "HIPAA", l: "Compliant" }, { v: "5★", l: "Rating" }] },
+  { t: "Digital Lead Marketing — CRM & Pricing Page", d: "Clean pricing page — DLM Lead Connector CRM at $149/mo with 60-day free trial, Monthly/Yearly toggle, 3-tier ad management plans, transparent pricing.", img: IMG + "digitallead_marketing_pricing_page_mockup.jpg", overlay: "Pricing Page", tag: "Digital Marketing — CRM & Pricing", cat: "landing", results: [{ v: "60", l: "Day Free Trial" }, { v: "3", l: "Service Tiers" }, { v: "5★", l: "Rating" }] },
+  { t: "Transforming Lives Digitally — Financial Platform", d: "Full AI-powered financial literacy platform — crypto, stocks and forex learning tracks, 4-tier pricing ($99–$139), AI tools, live workshops, affiliate programme.", img: IMG + "Transforming_digital_Mockup.jpg", overlay: "Finance & EdTech", tag: "Finance — Course Platform", cat: "landing", results: [{ v: "4", l: "Pricing Tiers" }, { v: "AI", l: "Integrated" }, { v: "5★", l: "Rating" }] },
+  { t: "Legal Lead — AI Marketing & Intake for Law Firms", d: "Complete AI-powered marketing and intake system for solo lawyers and SME law firms — AI receptionist, SEO, social media, reputation, CRM automation, 24/7 lead capture.", img: IMG + "Legal_Lead_Marketingmockup.jpg", overlay: "Legal / AI", tag: "Legal — AI Marketing & Intake", cat: "landing", results: [{ v: "24/7", l: "AI Intake" }, { v: "6", l: "Components" }, { v: "5★", l: "Rating" }] },
+  { t: "Pro Studio — Real Estate Media Website", d: "Premium real estate media site for a Toronto agency — 6 media services (photography, 4K video, 3D Matterport, drone, reels, floor plans), curated packages, 24hr delivery.", img: IMG + "PRO_STUDIO_Mockup.jpg", overlay: "Real Estate Media", tag: "Real Estate — Media & Photography", cat: "landing", results: [{ v: "6", l: "Services" }, { v: "24hr", l: "Delivery" }, { v: "🇨🇦", l: "Toronto" }] },
+  { t: "ClickUp Funnels — DFY Sales Funnel for Coaches", d: "100% done-for-you sales funnel landing page — offer mapping, copy, funnel design, email automation, tech integration, 90-day optimisation. Live in 30 days.", img: IMG + "Clickupmockup.jpg", overlay: "Sales Funnel", tag: "Coaching — DFY Sales Funnel", cat: "funnel", results: [{ v: "DFY", l: "Done For You" }, { v: "30", l: "Days to Live" }, { v: "24/7", l: "Running" }] },
+  { t: "Real — Top Producing Agent Recruitment Page", d: "High-converting agent recruitment page — 85% commission splits, Real Academy training (114 replays, 350+ hours), 3 value sections, stock rewards video, 7 consultation CTAs.", img: IMG + "RealEstatePropertyLandingPagemockup.jpg", overlay: "Agent Recruitment", tag: "Real Estate — Agent Recruitment", cat: "landing", results: [{ v: "85%", l: "Commission Split" }, { v: "350+", l: "Training Hours" }, { v: "5★", l: "Rating" }] },
+  { t: "AI Agent — OpenAI + SerpAPI + n8n Chat", d: "Intelligent chat-triggered AI agent in n8n — OpenAI Chat Model with Simple Memory for context retention and SerpAPI for real-time web search. Autonomous, 24/7.", img: IMG + "AI-Agent-OpenAI-SerpAPI-n8n.png", overlay: "n8n + OpenAI", tag: "AI Automation — n8n", cat: "ai", results: [{ v: "AI", l: "Agent" }, { v: "Live", l: "Web Search" }, { v: "24/7", l: "Automated" }] },
+  { t: "AI Event Aggregator — OpenAI + Pabbly RSS", d: "Automated event aggregation pipeline in Pabbly — RSS triggers ChatGPT to process and summarise items, formats dates across 3 DateTime nodes, publishes via API.", img: IMG + "AI-Event-Aggregator-OpenAI-Pabbly.png", overlay: "Pabbly + OpenAI", tag: "AI Automation — Pabbly Connect", cat: "ai", results: [{ v: "RSS", l: "Triggered" }, { v: "GPT", l: "Powered" }, { v: "Auto", l: "Publishing" }] },
+  { t: "AI Lead Scoring & Email Outreach — n8n", d: "Multi-workflow n8n automation — hourly lead fetch, AI intent classification, personalised outreach, Gmail response parsing, lead scoring, daily analytics. Fully autonomous.", img: IMG + "AI-Lead-Scoring-Email-Outreach-n8n.png", overlay: "n8n + AI", tag: "AI Automation — n8n", cat: "ai", results: [{ v: "AI", l: "Lead Scoring" }, { v: "Auto", l: "Outreach" }, { v: "Zero", l: "Manual Work" }] },
+  { t: "AI Website Research & Personalised Outreach", d: "Full n8n automation — AI reads a prospect's site, crawls sublinks, researches content, crafts a personalised GPT email, sends it, and logs everything with Telegram alerts.", img: IMG + "AI-PoweredWebsite_ResearchPersonalizedEmailOutreachAutomation_1.png", overlay: "n8n Automation", tag: "n8n — AI Automation", cat: "ai", results: [{ v: "AI", l: "Researched" }, { v: "Auto", l: "Email Sent" }, { v: "RAG", l: "Agent" }] },
+  { t: "GitHub Issue Management — Auto-Assign & Comment", d: "n8n workflow triggered by GitHub events — auto-assigns issue creators, detects 'I want to work on this' comments, checks assignment status, assigns commenter, adds comment.", img: IMG + "n8n_2_template.png", overlay: "n8n Automation", tag: "n8n — GitHub Automation", cat: "ai", results: [{ v: "Auto", l: "Assign" }, { v: "4", l: "Branch Logic" }, { v: "GitHub", l: "Integrated" }] },
+  { t: "AI Athlete Performance Tracking — n8n", d: "Full n8n AI automation for athlete coaching — logs sessions, analyses performance with GPT, checks thresholds, sends Slack/email alerts, weekly per-athlete summaries.", img: IMG + "n8n_3_project.png", overlay: "n8n + AI Agent", tag: "n8n — AI Performance Tracking", cat: "ai", results: [{ v: "AI", l: "Analysis" }, { v: "Auto", l: "Weekly Reports" }, { v: "Slack", l: "+ Email" }] },
+  { t: "Appointment Status Update Workflow — GHL", d: "Multi-branch GHL workflow handling 6 outcomes — Unable to Contact, Contacted, No Show, Showed, Sold, Unqualified. Auto-updates pipeline, tags, emails, SMS, review requests.", img: IMG + "ghl-status-workflow-branches.jpg", overlay: "GHL Workflow", tag: "GoHighLevel — Workflow Automation", cat: "ghl", results: [{ v: "6", l: "Branch Logic" }, { v: "Auto", l: "Pipeline Update" }, { v: "SMS", l: "+ Email" }] },
+  { t: "Lead Nurture Workflow — SMS, Email & Video", d: "Multi-trigger GHL nurture — form submit, appointment booking or lead reply. Sends Welcome SMS + Email, waits, checks for reply, follows up with video email. Smart branching.", img: IMG + "ghl-lead-nurture-workflow.png", overlay: "GHL Workflow", tag: "GoHighLevel — Lead Nurture", cat: "ghl", results: [{ v: "3", l: "Triggers" }, { v: "Auto", l: "SMS + Email" }, { v: "Video", l: "Follow-Up" }] },
+  { t: "AI-Powered Chatbot for Directory Platform", d: "Custom-trained AI business agent for a client's directory platform — designed to turn website visitors into qualified leads. Each business gets its own AI assistant.", img: IMG + "mockup-chatbot.jpg", overlay: "AI Integration", tag: "AI Integration", cat: "ai", results: [{ v: "AI", l: "Powered" }, { v: "24/7", l: "Automated" }, { v: "VIP", l: "Lead Flow" }] },
 ];
 
-const projectIcons = [Database, MessageSquare, GitBranch, Calendar, Workflow, ShoppingCart, Plug];
+const filters: { id: Cat; label: string }[] = [
+  { id: "all", label: "All Projects" },
+  { id: "landing", label: "Landing Pages" },
+  { id: "ghl", label: "GoHighLevel" },
+  { id: "ai", label: "AI & Automation" },
+  { id: "funnel", label: "Funnels" },
+];
 
 export function Projects() {
+  const [filter, setFilter] = useState<Cat>("all");
+  const visible = filter === "all" ? projects : projects.filter((p) => p.cat === filter);
+
   return (
     <section id="projects" className="relative py-24">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
@@ -263,51 +295,65 @@ export function Projects() {
             Featured <span className="text-gradient">projects</span>
           </h2>
           <p className="max-w-md text-muted-foreground">
-            A look inside the automation systems, funnels, and integrations I&apos;ve shipped.
+            {projects.length}+ landing pages, funnels, CRM workflows and AI automations shipped for clients across the US, UK, Canada, AU and EU.
           </p>
         </div>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((p, i) => {
-            const Icon = projectIcons[i % projectIcons.length];
+        <div className="reveal mt-10 flex flex-wrap gap-2">
+          {filters.map((f) => {
+            const active = filter === f.id;
             return (
-              <article
-                key={p.t}
-                className="reveal group relative flex flex-col overflow-hidden rounded-3xl border border-border bg-card transition hover:-translate-y-2 hover:border-primary/40 hover:shadow-[var(--shadow-card)]"
+              <button
+                key={f.id}
+                onClick={() => setFilter(f.id)}
+                className={`rounded-full border px-5 py-2 text-sm font-medium transition ${
+                  active
+                    ? "border-transparent bg-[image:var(--gradient-primary)] text-primary-foreground shadow-[var(--shadow-glow)]"
+                    : "border-border bg-secondary/40 text-muted-foreground hover:text-foreground"
+                }`}
               >
-                <div className={`relative aspect-[16/10] overflow-hidden bg-gradient-to-br ${p.grad}`}>
-                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.25),transparent_60%)]" />
-                  <div
-                    className="absolute inset-0 opacity-30"
-                    style={{
-                      backgroundImage:
-                        "linear-gradient(rgba(255,255,255,0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.12) 1px, transparent 1px)",
-                      backgroundSize: "32px 32px",
-                    }}
-                  />
-                  <div className="absolute inset-0 grid place-items-center transition duration-500 group-hover:scale-110">
-                    <div className="grid h-20 w-20 place-items-center rounded-2xl bg-white/15 backdrop-blur-md ring-1 ring-white/30">
-                      <Icon size={36} className="text-white" />
-                    </div>
-                  </div>
-                  <div className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white/15 text-white backdrop-blur transition group-hover:bg-white group-hover:text-foreground">
-                    <ArrowUpRight size={16} />
-                  </div>
-                </div>
-                <div className="flex flex-1 flex-col p-6">
-                  <h3 className="font-display text-lg font-semibold">{p.t}</h3>
-                  <p className="mt-2 flex-1 text-sm text-muted-foreground">{p.d}</p>
-                  <div className="mt-5 flex flex-wrap gap-2">
-                    {p.tags.map((t) => (
-                      <span key={t} className="rounded-full border border-border bg-secondary/60 px-3 py-1 text-xs text-muted-foreground">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </article>
+                {f.label}
+              </button>
             );
           })}
+        </div>
+
+        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {visible.map((p) => (
+            <article
+              key={p.t}
+              className="group relative flex flex-col overflow-hidden rounded-3xl border border-border bg-card transition hover:-translate-y-2 hover:border-primary/40 hover:shadow-[var(--shadow-card)] animate-[fade-up_0.5s_ease-out_both]"
+            >
+              <div className="relative aspect-[16/10] overflow-hidden bg-secondary">
+                <img
+                  src={p.img}
+                  alt={p.t}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-card/10 to-transparent" />
+                <span className="absolute left-4 top-4 rounded-full bg-background/70 px-3 py-1 text-xs font-medium text-foreground backdrop-blur">
+                  {p.overlay}
+                </span>
+                <div className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white/15 text-white backdrop-blur transition group-hover:bg-white group-hover:text-foreground">
+                  <ArrowUpRight size={16} />
+                </div>
+              </div>
+              <div className="flex flex-1 flex-col p-6">
+                <div className="text-xs font-medium uppercase tracking-wider text-accent">{p.tag}</div>
+                <h3 className="mt-2 font-display text-lg font-semibold leading-snug">{p.t}</h3>
+                <p className="mt-2 flex-1 text-sm text-muted-foreground">{p.d}</p>
+                <div className="mt-5 grid grid-cols-3 gap-2 border-t border-border pt-4">
+                  {p.results.map((r) => (
+                    <div key={r.l} className="text-center">
+                      <div className="font-display text-sm font-bold text-gradient">{r.v}</div>
+                      <div className="mt-0.5 text-[10px] uppercase tracking-wider text-muted-foreground">{r.l}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>
