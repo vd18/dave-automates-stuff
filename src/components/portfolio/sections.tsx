@@ -1,6 +1,6 @@
 import {
   Workflow, Zap, Mail, MessageSquare, Globe, Code2, Calendar, Users,
-  Database, GitBranch, ShoppingCart, Cog, ArrowUpRight, Send, Phone, MapPin,
+  Cog, ArrowUpRight, Send, Phone, MapPin,
   CheckCircle2, Sparkles, Layers, Plug, Briefcase, Star, Quote,
 } from "lucide-react";
 import { Counter } from "./Counter";
