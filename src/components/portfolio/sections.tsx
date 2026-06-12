@@ -4,8 +4,7 @@ import {
   CheckCircle2, Sparkles, Layers, Plug, Briefcase,
 } from "lucide-react";
 import { Counter } from "./Counter";
-import portraitAsset from "@/assets/dave-portrait.png.asset.json";
-const portrait = portraitAsset.url;
+import portrait from "@/assets/Gemini_Generated_Image_xu4tioxu4tioxu4t.png";
 import { useState } from "react";
 
 /* ---------- HERO ---------- */
@@ -66,7 +65,7 @@ export function Hero() {
           <div className="absolute -inset-6 [background:var(--gradient-glow)] animate-glow-pulse blur-2xl" />
           <div className="relative aspect-square overflow-hidden rounded-[2.5rem] border border-border glass-card animate-float">
             <img
-              src="src/assets/Gemini_Generated_Image_xu4tioxu4tioxu4t.png"
+              src={portrait}
               alt="Dave Vandan, Marketing Automation Developer"
               width={1024}
               height={1024}
