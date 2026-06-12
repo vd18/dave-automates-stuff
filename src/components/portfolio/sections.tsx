@@ -66,7 +66,7 @@ export function Hero() {
           <div className="absolute -inset-6 [background:var(--gradient-glow)] animate-glow-pulse blur-2xl" />
           <div className="relative aspect-square overflow-hidden rounded-[2.5rem] border border-border glass-card animate-float">
             <img
-              src={portrait}
+              src="src/assets/Gemini_Generated_Image_xu4tioxu4tioxu4t.png"
               alt="Dave Vandan, Marketing Automation Developer"
               width={1024}
               height={1024}
