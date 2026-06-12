@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/portfolio/Navbar";
 import {
-  Hero, About, Skills, Services, Projects, Experience, Stack, Testimonials, Contact, Footer,
+  Hero, About, Skills, Services, Projects, Experience, Stack, Contact, Footer,
 } from "@/components/portfolio/sections";
 import { useReveal } from "@/hooks/use-reveal";
 
