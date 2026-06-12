@@ -476,107 +476,41 @@ export function Stack() {
   );
 }
 
-/* ---------- TESTIMONIALS ---------- */
-const testimonials = [
-  { n: "Marcus Reed", r: "Founder, Bright Agency", q: "Dave rebuilt our entire client onboarding in GoHighLevel. We cut manual work by 70% in three weeks." },
-  { n: "Priya Shah", r: "CMO, Lumen Health", q: "From funnel to follow-up SMS, Dave delivered a system that genuinely moves the needle. Highly recommend." },
-  { n: "Jonas Müller", r: "Owner, FitLab Studios", q: "Our missed-call text back and appointment automation paid for itself in the first month." },
-  { n: "Sara Liu", r: "Operations, NorthPeak", q: "He thinks like a marketer and builds like an engineer. Rare combo. Our pipeline has never been cleaner." },
-];
-
-export function Testimonials() {
-  const [i, setI] = useState(0);
-  const t = testimonials[i];
-  return (
-    <section className="relative py-24">
-      <div className="mx-auto max-w-4xl px-5 sm:px-8">
-        <SectionLabel center>Testimonials</SectionLabel>
-        <h2 className="reveal mx-auto mt-4 max-w-2xl text-center font-display text-3xl font-bold sm:text-5xl">
-          Trusted by <span className="text-gradient">founders &amp; agencies</span>
-        </h2>
-
-        <div className="reveal glass-card mt-12 rounded-3xl p-8 sm:p-12">
-          <Quote className="text-accent" size={32} />
-          <p className="mt-5 font-display text-xl leading-relaxed sm:text-2xl">&ldquo;{t.q}&rdquo;</p>
-          <div className="mt-8 flex flex-wrap items-center justify-between gap-5">
-            <div className="flex items-center gap-4">
-              <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-[image:var(--gradient-primary)] font-bold text-primary-foreground">
-                {t.n[0]}
-              </div>
-              <div className="min-w-0">
-                <div className="font-semibold">{t.n}</div>
-                <div className="truncate text-sm text-muted-foreground">{t.r}</div>
-              </div>
-            </div>
-            <div className="flex items-center gap-3">
-              <div className="flex gap-0.5 text-accent">
-                {Array.from({ length: 5 }).map((_, k) => <Star key={k} size={16} fill="currentColor" />)}
-              </div>
-              <div className="ml-3 flex gap-2">
-                {testimonials.map((_, k) => (
-                  <button
-                    key={k}
-                    onClick={() => setI(k)}
-                    aria-label={`Testimonial ${k + 1}`}
-                    className={`h-2 rounded-full transition-all ${k === i ? "w-8 bg-[image:var(--gradient-primary)]" : "w-2 bg-border"}`}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 /* ---------- CONTACT ---------- */
 export function Contact() {
   return (
     <section id="contact" className="relative py-24">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr]">
-          <div className="reveal">
-            <SectionLabel>Contact</SectionLabel>
-            <h2 className="mt-4 font-display text-3xl font-bold sm:text-5xl">
-              Let&apos;s automate your <span className="text-gradient">business</span>
-            </h2>
-            <p className="mt-4 max-w-lg text-muted-foreground">
-              Ready to streamline your operations, automate customer journeys, and scale your business?
-              Tell me about your project — I usually reply within a day.
-            </p>
+      <div className="mx-auto max-w-5xl px-5 sm:px-8 text-center">
+        <SectionLabel center>Contact</SectionLabel>
+        <h2 className="reveal mx-auto mt-4 max-w-3xl font-display text-3xl font-bold sm:text-5xl">
+          Let&apos;s automate your <span className="text-gradient">business</span>
+        </h2>
+        <p className="reveal mx-auto mt-4 max-w-2xl text-muted-foreground">
+          Ready to streamline your operations, automate customer journeys, and scale your business?
+          Reach out on WhatsApp or email — I usually reply within a day.
+        </p>
 
-            <div className="mt-10 space-y-4">
-              <ContactItem icon={Phone} label="Phone" value="+91 6354589953" href="tel:+916354589953" />
-              <ContactItem icon={Mail} label="Email" value="davevandan18@gmail.com" href="mailto:davevandan18@gmail.com" />
-              <ContactItem icon={MapPin} label="Location" value="Junagadh, Gujarat, India" />
-            </div>
+        <div className="reveal mt-12 grid gap-4 sm:grid-cols-3">
+          <ContactItem icon={Phone} label="Phone" value="+91 6354589953" href="tel:+916354589953" />
+          <ContactItem icon={Mail} label="Email" value="davevandan18@gmail.com" href="mailto:davevandan18@gmail.com" />
+          <ContactItem icon={MapPin} label="Location" value="Ahmedabad & Junagadh, Gujarat, India" />
+        </div>
 
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href="https://wa.me/916354589953"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-5 py-3 text-sm font-medium backdrop-blur transition hover:bg-secondary"
-              >
-                <MessageSquare size={16} /> WhatsApp
-              </a>
-              <a
-                href="mailto:davevandan18@gmail.com"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-5 py-3 text-sm font-medium backdrop-blur transition hover:bg-secondary"
-              >
-                <Mail size={16} /> Email Me
-              </a>
-              <a
-                href="#"
-                className="inline-flex items-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-5 py-3 text-sm font-medium text-primary-foreground shadow-[var(--shadow-glow)]"
-              >
-                <Calendar size={16} /> Book a Call
-              </a>
-            </div>
-          </div>
-
-          <ContactForm />
+        <div className="reveal mt-10 flex flex-wrap justify-center gap-3">
+          <a
+            href="https://wa.me/916354589953"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-[var(--shadow-glow)] transition hover:opacity-90"
+          >
+            <MessageSquare size={16} /> Chat on WhatsApp
+          </a>
+          <a
+            href="mailto:davevandan18@gmail.com"
+            className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-7 py-3.5 text-sm font-medium backdrop-blur transition hover:bg-secondary"
+          >
+            <Mail size={16} /> Email Me
+          </a>
         </div>
       </div>
     </section>
@@ -586,7 +520,7 @@ export function Contact() {
 function ContactItem({ icon: Icon, label, value, href }: { icon: any; label: string; value: string; href?: string }) {
   const Cmp: any = href ? "a" : "div";
   return (
-    <Cmp href={href} className="glass-card group flex items-center gap-4 rounded-2xl p-4 transition hover:border-primary/40">
+    <Cmp href={href} className="glass-card group flex items-center gap-4 rounded-2xl p-4 text-left transition hover:border-primary/40">
       <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-[image:var(--gradient-primary)]">
         <Icon size={18} className="text-primary-foreground" />
       </div>
@@ -598,52 +532,6 @@ function ContactItem({ icon: Icon, label, value, href }: { icon: any; label: str
   );
 }
 
-function ContactForm() {
-  const [sent, setSent] = useState(false);
-  return (
-    <form
-      onSubmit={(e) => { e.preventDefault(); setSent(true); }}
-      className="reveal glass-card glow-border rounded-3xl p-6 sm:p-8"
-    >
-      <div className="grid gap-5 sm:grid-cols-2">
-        <Field label="Your name" name="name" />
-        <Field label="Email" name="email" type="email" />
-      </div>
-      <div className="mt-5">
-        <Field label="Subject" name="subject" />
-      </div>
-      <div className="mt-5">
-        <label className="text-xs uppercase tracking-wider text-muted-foreground">Message</label>
-        <textarea
-          required
-          rows={5}
-          className="mt-2 w-full resize-none rounded-2xl border border-border bg-secondary/40 px-4 py-3 text-sm outline-none transition focus:border-primary"
-          placeholder="Tell me about your project..."
-        />
-      </div>
-      <button
-        type="submit"
-        className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-6 py-3.5 font-medium text-primary-foreground shadow-[var(--shadow-glow)] transition hover:opacity-90"
-      >
-        {sent ? "Message Sent ✓" : (<>Send Message <Send size={16} /></>)}
-      </button>
-    </form>
-  );
-}
-
-function Field({ label, name, type = "text" }: { label: string; name: string; type?: string }) {
-  return (
-    <label className="block">
-      <span className="text-xs uppercase tracking-wider text-muted-foreground">{label}</span>
-      <input
-        required
-        name={name}
-        type={type}
-        className="mt-2 w-full rounded-2xl border border-border bg-secondary/40 px-4 py-3 text-sm outline-none transition focus:border-primary"
-      />
-    </label>
-  );
-}
 
 /* ---------- FOOTER ---------- */
 export function Footer() {
