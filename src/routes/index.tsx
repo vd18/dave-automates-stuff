@@ -36,7 +36,7 @@ function Index() {
       <Projects />
       <Experience />
       <Stack />
-      <Testimonials />
+
       <Contact />
       <Footer />
     </main>
