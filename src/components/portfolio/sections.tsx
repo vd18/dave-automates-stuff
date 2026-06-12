@@ -4,7 +4,8 @@ import {
   CheckCircle2, Sparkles, Layers, Plug, Briefcase,
 } from "lucide-react";
 import { Counter } from "./Counter";
-import portrait from "@/assets/dave-portrait.jpg";
+import portraitAsset from "@/assets/dave-portrait.png.asset.json";
+const portrait = portraitAsset.url;
 import { useState } from "react";
 
 /* ---------- HERO ---------- */
@@ -308,7 +309,7 @@ export function Projects() {
             Featured <span className="text-gradient">projects</span>
           </h2>
           <p className="max-w-md text-muted-foreground">
-            {projects.length}+ landing pages, funnels, CRM workflows and AI automations shipped for clients across the US, UK, Canada, AU and EU.
+            50+ landing pages, funnels, CRM workflows and AI automations shipped for clients across the US, UK, Canada, AU and EU.
           </p>
         </div>
 
