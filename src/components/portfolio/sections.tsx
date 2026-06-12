@@ -348,9 +348,21 @@ export function Projects() {
                 <span className="absolute left-4 top-4 rounded-full bg-background/70 px-3 py-1 text-xs font-medium text-foreground backdrop-blur">
                   {p.overlay}
                 </span>
-                <div className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white/15 text-white backdrop-blur transition group-hover:bg-white group-hover:text-foreground">
-                  <ArrowUpRight size={16} />
-                </div>
+                {p.href ? (
+                  <a
+                    href={p.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`Open ${p.t}`}
+                    className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white/15 text-white backdrop-blur transition group-hover:bg-white group-hover:text-foreground"
+                  >
+                    <ArrowUpRight size={16} />
+                  </a>
+                ) : (
+                  <div className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white/15 text-white backdrop-blur transition group-hover:bg-white group-hover:text-foreground">
+                    <ArrowUpRight size={16} />
+                  </div>
+                )}
               </div>
               <div className="flex flex-1 flex-col p-6">
                 <div className="text-xs font-medium uppercase tracking-wider text-accent">{p.tag}</div>
