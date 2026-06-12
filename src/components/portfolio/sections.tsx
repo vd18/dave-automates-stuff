@@ -1,7 +1,7 @@
 import {
-  Workflow, Zap, Mail, MessageSquare, Globe, Code2, Calendar, Users,
-  Cog, ArrowUpRight, Send, Phone, MapPin,
-  CheckCircle2, Sparkles, Layers, Plug, Briefcase, Star, Quote,
+  Workflow, Zap, Mail, MessageSquare, Globe, Code2, Users,
+  Cog, ArrowUpRight, Phone, MapPin,
+  CheckCircle2, Sparkles, Layers, Plug, Briefcase,
 } from "lucide-react";
 import { Counter } from "./Counter";
 import portrait from "@/assets/dave-portrait.jpg";
