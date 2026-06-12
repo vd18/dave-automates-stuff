@@ -4,7 +4,8 @@ import {
   CheckCircle2, Sparkles, Layers, Plug, Briefcase,
 } from "lucide-react";
 import { Counter } from "./Counter";
-import portrait from "@/assets/dave-portrait.jpg";
+import portraitAsset from "@/assets/dave-portrait.png.asset.json";
+const portrait = portraitAsset.url;
 import { useState } from "react";
 
 /* ---------- HERO ---------- */
