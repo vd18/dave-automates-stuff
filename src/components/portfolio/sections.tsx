@@ -1,7 +1,7 @@
 import {
-  Workflow, Zap, Mail, MessageSquare, Globe, Code2, Calendar, Users,
-  Cog, ArrowUpRight, Send, Phone, MapPin,
-  CheckCircle2, Sparkles, Layers, Plug, Briefcase, Star, Quote,
+  Workflow, Zap, Mail, MessageSquare, Globe, Code2, Users,
+  Cog, ArrowUpRight, Phone, MapPin,
+  CheckCircle2, Sparkles, Layers, Plug, Briefcase,
 } from "lucide-react";
 import { Counter } from "./Counter";
 import portrait from "@/assets/dave-portrait.jpg";
@@ -242,9 +242,24 @@ export function Services() {
 
 /* ---------- PROJECTS ---------- */
 const IMG = "https://petersamuelagada.github.io/";
+const SHOT = (url: string) =>
+  `https://image.thum.io/get/width/1200/crop/750/noanimate/${url}`;
 type Cat = "all" | "landing" | "ghl" | "ai" | "funnel";
 
-const projects: { t: string; d: string; img: string; overlay: string; tag: string; cat: Exclude<Cat, "all">; results: { v: string; l: string }[] }[] = [
+const projects: { t: string; d: string; img: string; overlay: string; tag: string; cat: Exclude<Cat, "all">; results: { v: string; l: string }[]; href?: string }[] = [
+  /* ----- NEW LIVE LANDING PAGES & FUNNELS ----- */
+  { t: "Alo Wellness Club — Membership Landing Page", d: "Premium wellness membership landing page for Alo Yoga — class library, live sessions, app showcase and a high-converting subscription CTA.", img: SHOT("https://wellnessclub.aloyoga.com/"), overlay: "Landing Page", tag: "Wellness — Membership Funnel", cat: "landing", results: [{ v: "Live", l: "Production" }, { v: "Sub", l: "Funnel" }, { v: "CRO", l: "Optimised" }], href: "https://wellnessclub.aloyoga.com/" },
+  { t: "Namaste Yog Fitness — Lead Funnel", d: "Fitness lead-gen landing page — programme highlights, trainer credibility, success stories and form-driven enrolment flow.", img: SHOT("https://fit.namasteyog.in/"), overlay: "Landing Page", tag: "Fitness — Lead Generation", cat: "funnel", results: [{ v: "Lead", l: "Capture" }, { v: "GHL", l: "Built" }, { v: "Mobile", l: "First" }], href: "https://fit.namasteyog.in/" },
+  { t: "Keri Shull — Real Estate Authority Site", d: "High-trust real estate landing page — team credibility, market guarantees, testimonials and multi-touch consultation booking funnel.", img: SHOT("https://kerishull.com/"), overlay: "Real Estate", tag: "Real Estate — Authority Funnel", cat: "landing", results: [{ v: "Team", l: "Site" }, { v: "Multi", l: "CTA" }, { v: "5★", l: "Trust" }], href: "https://kerishull.com/" },
+  { t: "The Master's Way — 90-Min Master Event Funnel", d: "Live event registration funnel — countdown, speaker bio, value-stacked agenda, bonus reveal and one-step signup form for a 90-minute masterclass.", img: SHOT("https://themastersway.in/90minutemasterevent"), overlay: "Event Funnel", tag: "Coaching — Event Registration", cat: "funnel", results: [{ v: "90", l: "Min Event" }, { v: "Live", l: "Webinar" }, { v: "1-Step", l: "Optin" }], href: "https://themastersway.in/90minutemasterevent" },
+  { t: "GHL5 — Agency Home Page (GoHighLevel)", d: "Full agency home built inside GoHighLevel — hero, service grid, social proof, pricing tiers and integrated lead capture wired to CRM workflows.", img: SHOT("https://ghl5.tainybayno.com/home"), overlay: "GHL Build", tag: "Agency — GoHighLevel Site", cat: "ghl", results: [{ v: "GHL", l: "Native" }, { v: "Full", l: "Site" }, { v: "CRM", l: "Synced" }], href: "https://ghl5.tainybayno.com/home" },
+  { t: "Scale With Saurabh — Offer Page Funnel", d: "Conversion-focused offer page — irresistible offer stack, value comparison, urgency, FAQ, and a one-click checkout-driven flow.", img: SHOT("https://scalewithsaurabh.in/offer-page-9789"), overlay: "Offer Page", tag: "Coaching — Offer Funnel", cat: "funnel", results: [{ v: "Offer", l: "Stack" }, { v: "Urgency", l: "Timer" }, { v: "1-Click", l: "Buy" }], href: "https://scalewithsaurabh.in/offer-page-9789" },
+  { t: "Valerie Fuller DMD — Masterclass Funnel", d: "Practice-growth masterclass funnel for dental professionals — instructor authority, curriculum breakdown, testimonials and registration capture.", img: SHOT("https://valeriefullerdmd.com/masterclass"), overlay: "Masterclass", tag: "Healthcare — Masterclass Funnel", cat: "funnel", results: [{ v: "Pro", l: "Audience" }, { v: "Live", l: "Class" }, { v: "Auto", l: "Reminders" }], href: "https://valeriefullerdmd.com/masterclass" },
+  { t: "Funnel Pandit — Sales Funnel Preview", d: "End-to-end sales funnel — hook hero, problem/solution flow, social proof carousel, pricing comparison and integrated checkout.", img: SHOT("https://id.funnelpandit.com/v2/preview/11tkhRGV0KUNRnfcPtq9?notrack=true"), overlay: "Sales Funnel", tag: "Info-Product — Sales Funnel", cat: "funnel", results: [{ v: "Full", l: "Funnel" }, { v: "Pricing", l: "Compare" }, { v: "Checkout", l: "Live" }], href: "https://id.funnelpandit.com/v2/preview/11tkhRGV0KUNRnfcPtq9?notrack=true" },
+  { t: "Fittr With Sula — 100M Fitness Funnel", d: "High-volume fitness coaching funnel — transformation gallery, programme details, coach bio and webinar-style application form.", img: SHOT("https://fittrwithsula.scale100million.com/"), overlay: "Fitness Funnel", tag: "Fitness — Application Funnel", cat: "funnel", results: [{ v: "Scale", l: "Funnel" }, { v: "Apply", l: "Form" }, { v: "Mobile", l: "First" }], href: "https://fittrwithsula.scale100million.com/" },
+  { t: "Healthy Nation — Coach Sourav Fitness Plan", d: "Lead-magnet landing page — free fitness exit plan giveaway, value stack, coach credentials and pixel-tracked optin flow.", img: SHOT("https://healthynationonline.com/fitness-exit-plan-by-coach-sourav/"), overlay: "Lead Magnet", tag: "Fitness — Optin Funnel", cat: "funnel", results: [{ v: "Free", l: "Lead Magnet" }, { v: "Pixel", l: "Tracked" }, { v: "Optin", l: "Funnel" }], href: "https://healthynationonline.com/fitness-exit-plan-by-coach-sourav/" },
+
+  /* ----- EXISTING PORTFOLIO PROJECTS ----- */
   { t: "Concrete Construction Lead Gen Page — ISCHBA", d: "Full lead-gen landing page for a US concrete construction company — services showcase, 4-step process, free estimate form, and CRM automation built inside GoHighLevel.", img: IMG + "Mockup_Real_estate.jpg", overlay: "Construction", tag: "Construction — Lead Generation", cat: "landing", results: [{ v: "Lead", l: "Gen System" }, { v: "CRM", l: "Synced" }, { v: "5★", l: "Rating" }] },
   { t: "Herbal Health Product Landing Page", d: "Full landing page for a premium herbal health brand — hero, product showcase, testimonials, FAQ, and conversion-optimized CTAs built inside GoHighLevel.", img: IMG + "mockup-herbal.jpg", overlay: "Landing Page", tag: "Health & Wellness", cat: "landing", results: [{ v: "GHL", l: "Built" }, { v: "Full", l: "Page Design" }, { v: "CRO", l: "Optimised" }] },
   { t: "Restorative Health & Wellness Clinic", d: "Complete website for a health clinic — services, team profiles, testimonials, partner logos and a contact form with full GHL integration and automated follow-up.", img: IMG + "mockup-clinic.jpg", overlay: "Landing Page", tag: "Health & Wellness Clinic", cat: "landing", results: [{ v: "GHL", l: "Integrated" }, { v: "Auto", l: "Follow-up" }, { v: "Multi", l: "Section" }] },
@@ -263,12 +278,10 @@ const projects: { t: string; d: string; img: string; overlay: string; tag: strin
   { t: "Pro Studio — Real Estate Media Website", d: "Premium real estate media site for a Toronto agency — 6 media services (photography, 4K video, 3D Matterport, drone, reels, floor plans), curated packages, 24hr delivery.", img: IMG + "PRO_STUDIO_Mockup.jpg", overlay: "Real Estate Media", tag: "Real Estate — Media & Photography", cat: "landing", results: [{ v: "6", l: "Services" }, { v: "24hr", l: "Delivery" }, { v: "🇨🇦", l: "Toronto" }] },
   { t: "ClickUp Funnels — DFY Sales Funnel for Coaches", d: "100% done-for-you sales funnel landing page — offer mapping, copy, funnel design, email automation, tech integration, 90-day optimisation. Live in 30 days.", img: IMG + "Clickupmockup.jpg", overlay: "Sales Funnel", tag: "Coaching — DFY Sales Funnel", cat: "funnel", results: [{ v: "DFY", l: "Done For You" }, { v: "30", l: "Days to Live" }, { v: "24/7", l: "Running" }] },
   { t: "Real — Top Producing Agent Recruitment Page", d: "High-converting agent recruitment page — 85% commission splits, Real Academy training (114 replays, 350+ hours), 3 value sections, stock rewards video, 7 consultation CTAs.", img: IMG + "RealEstatePropertyLandingPagemockup.jpg", overlay: "Agent Recruitment", tag: "Real Estate — Agent Recruitment", cat: "landing", results: [{ v: "85%", l: "Commission Split" }, { v: "350+", l: "Training Hours" }, { v: "5★", l: "Rating" }] },
-  { t: "AI Agent — OpenAI + SerpAPI + n8n Chat", d: "Intelligent chat-triggered AI agent in n8n — OpenAI Chat Model with Simple Memory for context retention and SerpAPI for real-time web search. Autonomous, 24/7.", img: IMG + "AI-Agent-OpenAI-SerpAPI-n8n.png", overlay: "n8n + OpenAI", tag: "AI Automation — n8n", cat: "ai", results: [{ v: "AI", l: "Agent" }, { v: "Live", l: "Web Search" }, { v: "24/7", l: "Automated" }] },
-  { t: "AI Event Aggregator — OpenAI + Pabbly RSS", d: "Automated event aggregation pipeline in Pabbly — RSS triggers ChatGPT to process and summarise items, formats dates across 3 DateTime nodes, publishes via API.", img: IMG + "AI-Event-Aggregator-OpenAI-Pabbly.png", overlay: "Pabbly + OpenAI", tag: "AI Automation — Pabbly Connect", cat: "ai", results: [{ v: "RSS", l: "Triggered" }, { v: "GPT", l: "Powered" }, { v: "Auto", l: "Publishing" }] },
+
+  /* ----- AI / AUTOMATION (only 1 n8n) ----- */
   { t: "AI Lead Scoring & Email Outreach — n8n", d: "Multi-workflow n8n automation — hourly lead fetch, AI intent classification, personalised outreach, Gmail response parsing, lead scoring, daily analytics. Fully autonomous.", img: IMG + "AI-Lead-Scoring-Email-Outreach-n8n.png", overlay: "n8n + AI", tag: "AI Automation — n8n", cat: "ai", results: [{ v: "AI", l: "Lead Scoring" }, { v: "Auto", l: "Outreach" }, { v: "Zero", l: "Manual Work" }] },
-  { t: "AI Website Research & Personalised Outreach", d: "Full n8n automation — AI reads a prospect's site, crawls sublinks, researches content, crafts a personalised GPT email, sends it, and logs everything with Telegram alerts.", img: IMG + "AI-PoweredWebsite_ResearchPersonalizedEmailOutreachAutomation_1.png", overlay: "n8n Automation", tag: "n8n — AI Automation", cat: "ai", results: [{ v: "AI", l: "Researched" }, { v: "Auto", l: "Email Sent" }, { v: "RAG", l: "Agent" }] },
-  { t: "GitHub Issue Management — Auto-Assign & Comment", d: "n8n workflow triggered by GitHub events — auto-assigns issue creators, detects 'I want to work on this' comments, checks assignment status, assigns commenter, adds comment.", img: IMG + "n8n_2_template.png", overlay: "n8n Automation", tag: "n8n — GitHub Automation", cat: "ai", results: [{ v: "Auto", l: "Assign" }, { v: "4", l: "Branch Logic" }, { v: "GitHub", l: "Integrated" }] },
-  { t: "AI Athlete Performance Tracking — n8n", d: "Full n8n AI automation for athlete coaching — logs sessions, analyses performance with GPT, checks thresholds, sends Slack/email alerts, weekly per-athlete summaries.", img: IMG + "n8n_3_project.png", overlay: "n8n + AI Agent", tag: "n8n — AI Performance Tracking", cat: "ai", results: [{ v: "AI", l: "Analysis" }, { v: "Auto", l: "Weekly Reports" }, { v: "Slack", l: "+ Email" }] },
+  { t: "AI Event Aggregator — OpenAI + Pabbly RSS", d: "Automated event aggregation pipeline in Pabbly — RSS triggers ChatGPT to process and summarise items, formats dates across 3 DateTime nodes, publishes via API.", img: IMG + "AI-Event-Aggregator-OpenAI-Pabbly.png", overlay: "Pabbly + OpenAI", tag: "AI Automation — Pabbly Connect", cat: "ai", results: [{ v: "RSS", l: "Triggered" }, { v: "GPT", l: "Powered" }, { v: "Auto", l: "Publishing" }] },
   { t: "Appointment Status Update Workflow — GHL", d: "Multi-branch GHL workflow handling 6 outcomes — Unable to Contact, Contacted, No Show, Showed, Sold, Unqualified. Auto-updates pipeline, tags, emails, SMS, review requests.", img: IMG + "ghl-status-workflow-branches.jpg", overlay: "GHL Workflow", tag: "GoHighLevel — Workflow Automation", cat: "ghl", results: [{ v: "6", l: "Branch Logic" }, { v: "Auto", l: "Pipeline Update" }, { v: "SMS", l: "+ Email" }] },
   { t: "Lead Nurture Workflow — SMS, Email & Video", d: "Multi-trigger GHL nurture — form submit, appointment booking or lead reply. Sends Welcome SMS + Email, waits, checks for reply, follows up with video email. Smart branching.", img: IMG + "ghl-lead-nurture-workflow.png", overlay: "GHL Workflow", tag: "GoHighLevel — Lead Nurture", cat: "ghl", results: [{ v: "3", l: "Triggers" }, { v: "Auto", l: "SMS + Email" }, { v: "Video", l: "Follow-Up" }] },
   { t: "AI-Powered Chatbot for Directory Platform", d: "Custom-trained AI business agent for a client's directory platform — designed to turn website visitors into qualified leads. Each business gets its own AI assistant.", img: IMG + "mockup-chatbot.jpg", overlay: "AI Integration", tag: "AI Integration", cat: "ai", results: [{ v: "AI", l: "Powered" }, { v: "24/7", l: "Automated" }, { v: "VIP", l: "Lead Flow" }] },
@@ -335,9 +348,21 @@ export function Projects() {
                 <span className="absolute left-4 top-4 rounded-full bg-background/70 px-3 py-1 text-xs font-medium text-foreground backdrop-blur">
                   {p.overlay}
                 </span>
-                <div className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white/15 text-white backdrop-blur transition group-hover:bg-white group-hover:text-foreground">
-                  <ArrowUpRight size={16} />
-                </div>
+                {p.href ? (
+                  <a
+                    href={p.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`Open ${p.t}`}
+                    className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white/15 text-white backdrop-blur transition group-hover:bg-white group-hover:text-foreground"
+                  >
+                    <ArrowUpRight size={16} />
+                  </a>
+                ) : (
+                  <div className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white/15 text-white backdrop-blur transition group-hover:bg-white group-hover:text-foreground">
+                    <ArrowUpRight size={16} />
+                  </div>
+                )}
               </div>
               <div className="flex flex-1 flex-col p-6">
                 <div className="text-xs font-medium uppercase tracking-wider text-accent">{p.tag}</div>
@@ -463,107 +488,41 @@ export function Stack() {
   );
 }
 
-/* ---------- TESTIMONIALS ---------- */
-const testimonials = [
-  { n: "Marcus Reed", r: "Founder, Bright Agency", q: "Dave rebuilt our entire client onboarding in GoHighLevel. We cut manual work by 70% in three weeks." },
-  { n: "Priya Shah", r: "CMO, Lumen Health", q: "From funnel to follow-up SMS, Dave delivered a system that genuinely moves the needle. Highly recommend." },
-  { n: "Jonas Müller", r: "Owner, FitLab Studios", q: "Our missed-call text back and appointment automation paid for itself in the first month." },
-  { n: "Sara Liu", r: "Operations, NorthPeak", q: "He thinks like a marketer and builds like an engineer. Rare combo. Our pipeline has never been cleaner." },
-];
-
-export function Testimonials() {
-  const [i, setI] = useState(0);
-  const t = testimonials[i];
-  return (
-    <section className="relative py-24">
-      <div className="mx-auto max-w-4xl px-5 sm:px-8">
-        <SectionLabel center>Testimonials</SectionLabel>
-        <h2 className="reveal mx-auto mt-4 max-w-2xl text-center font-display text-3xl font-bold sm:text-5xl">
-          Trusted by <span className="text-gradient">founders &amp; agencies</span>
-        </h2>
-
-        <div className="reveal glass-card mt-12 rounded-3xl p-8 sm:p-12">
-          <Quote className="text-accent" size={32} />
-          <p className="mt-5 font-display text-xl leading-relaxed sm:text-2xl">&ldquo;{t.q}&rdquo;</p>
-          <div className="mt-8 flex flex-wrap items-center justify-between gap-5">
-            <div className="flex items-center gap-4">
-              <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-[image:var(--gradient-primary)] font-bold text-primary-foreground">
-                {t.n[0]}
-              </div>
-              <div className="min-w-0">
-                <div className="font-semibold">{t.n}</div>
-                <div className="truncate text-sm text-muted-foreground">{t.r}</div>
-              </div>
-            </div>
-            <div className="flex items-center gap-3">
-              <div className="flex gap-0.5 text-accent">
-                {Array.from({ length: 5 }).map((_, k) => <Star key={k} size={16} fill="currentColor" />)}
-              </div>
-              <div className="ml-3 flex gap-2">
-                {testimonials.map((_, k) => (
-                  <button
-                    key={k}
-                    onClick={() => setI(k)}
-                    aria-label={`Testimonial ${k + 1}`}
-                    className={`h-2 rounded-full transition-all ${k === i ? "w-8 bg-[image:var(--gradient-primary)]" : "w-2 bg-border"}`}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 /* ---------- CONTACT ---------- */
 export function Contact() {
   return (
     <section id="contact" className="relative py-24">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr]">
-          <div className="reveal">
-            <SectionLabel>Contact</SectionLabel>
-            <h2 className="mt-4 font-display text-3xl font-bold sm:text-5xl">
-              Let&apos;s automate your <span className="text-gradient">business</span>
-            </h2>
-            <p className="mt-4 max-w-lg text-muted-foreground">
-              Ready to streamline your operations, automate customer journeys, and scale your business?
-              Tell me about your project — I usually reply within a day.
-            </p>
+      <div className="mx-auto max-w-5xl px-5 sm:px-8 text-center">
+        <SectionLabel center>Contact</SectionLabel>
+        <h2 className="reveal mx-auto mt-4 max-w-3xl font-display text-3xl font-bold sm:text-5xl">
+          Let&apos;s automate your <span className="text-gradient">business</span>
+        </h2>
+        <p className="reveal mx-auto mt-4 max-w-2xl text-muted-foreground">
+          Ready to streamline your operations, automate customer journeys, and scale your business?
+          Reach out on WhatsApp or email — I usually reply within a day.
+        </p>
 
-            <div className="mt-10 space-y-4">
-              <ContactItem icon={Phone} label="Phone" value="+91 6354589953" href="tel:+916354589953" />
-              <ContactItem icon={Mail} label="Email" value="davevandan18@gmail.com" href="mailto:davevandan18@gmail.com" />
-              <ContactItem icon={MapPin} label="Location" value="Junagadh, Gujarat, India" />
-            </div>
+        <div className="reveal mt-12 grid gap-4 sm:grid-cols-3">
+          <ContactItem icon={Phone} label="Phone" value="+91 6354589953" href="tel:+916354589953" />
+          <ContactItem icon={Mail} label="Email" value="davevandan18@gmail.com" href="mailto:davevandan18@gmail.com" />
+          <ContactItem icon={MapPin} label="Location" value="Ahmedabad & Junagadh, Gujarat, India" />
+        </div>
 
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href="https://wa.me/916354589953"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-5 py-3 text-sm font-medium backdrop-blur transition hover:bg-secondary"
-              >
-                <MessageSquare size={16} /> WhatsApp
-              </a>
-              <a
-                href="mailto:davevandan18@gmail.com"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-5 py-3 text-sm font-medium backdrop-blur transition hover:bg-secondary"
-              >
-                <Mail size={16} /> Email Me
-              </a>
-              <a
-                href="#"
-                className="inline-flex items-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-5 py-3 text-sm font-medium text-primary-foreground shadow-[var(--shadow-glow)]"
-              >
-                <Calendar size={16} /> Book a Call
-              </a>
-            </div>
-          </div>
-
-          <ContactForm />
+        <div className="reveal mt-10 flex flex-wrap justify-center gap-3">
+          <a
+            href="https://wa.me/916354589953"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-[var(--shadow-glow)] transition hover:opacity-90"
+          >
+            <MessageSquare size={16} /> Chat on WhatsApp
+          </a>
+          <a
+            href="mailto:davevandan18@gmail.com"
+            className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-7 py-3.5 text-sm font-medium backdrop-blur transition hover:bg-secondary"
+          >
+            <Mail size={16} /> Email Me
+          </a>
         </div>
       </div>
     </section>
@@ -573,7 +532,7 @@ export function Contact() {
 function ContactItem({ icon: Icon, label, value, href }: { icon: any; label: string; value: string; href?: string }) {
   const Cmp: any = href ? "a" : "div";
   return (
-    <Cmp href={href} className="glass-card group flex items-center gap-4 rounded-2xl p-4 transition hover:border-primary/40">
+    <Cmp href={href} className="glass-card group flex items-center gap-4 rounded-2xl p-4 text-left transition hover:border-primary/40">
       <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-[image:var(--gradient-primary)]">
         <Icon size={18} className="text-primary-foreground" />
       </div>
@@ -585,52 +544,6 @@ function ContactItem({ icon: Icon, label, value, href }: { icon: any; label: str
   );
 }
 
-function ContactForm() {
-  const [sent, setSent] = useState(false);
-  return (
-    <form
-      onSubmit={(e) => { e.preventDefault(); setSent(true); }}
-      className="reveal glass-card glow-border rounded-3xl p-6 sm:p-8"
-    >
-      <div className="grid gap-5 sm:grid-cols-2">
-        <Field label="Your name" name="name" />
-        <Field label="Email" name="email" type="email" />
-      </div>
-      <div className="mt-5">
-        <Field label="Subject" name="subject" />
-      </div>
-      <div className="mt-5">
-        <label className="text-xs uppercase tracking-wider text-muted-foreground">Message</label>
-        <textarea
-          required
-          rows={5}
-          className="mt-2 w-full resize-none rounded-2xl border border-border bg-secondary/40 px-4 py-3 text-sm outline-none transition focus:border-primary"
-          placeholder="Tell me about your project..."
-        />
-      </div>
-      <button
-        type="submit"
-        className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-6 py-3.5 font-medium text-primary-foreground shadow-[var(--shadow-glow)] transition hover:opacity-90"
-      >
-        {sent ? "Message Sent ✓" : (<>Send Message <Send size={16} /></>)}
-      </button>
-    </form>
-  );
-}
-
-function Field({ label, name, type = "text" }: { label: string; name: string; type?: string }) {
-  return (
-    <label className="block">
-      <span className="text-xs uppercase tracking-wider text-muted-foreground">{label}</span>
-      <input
-        required
-        name={name}
-        type={type}
-        className="mt-2 w-full rounded-2xl border border-border bg-secondary/40 px-4 py-3 text-sm outline-none transition focus:border-primary"
-      />
-    </label>
-  );
-}
 
 /* ---------- FOOTER ---------- */
 export function Footer() {
