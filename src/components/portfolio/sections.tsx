@@ -46,8 +46,8 @@ export function Hero() {
 
           <div className="mt-12 grid grid-cols-2 gap-5 sm:grid-cols-4">
             {[
-              { n: 5, s: "+", l: "Years Experience" },
-              { n: 100, s: "+", l: "Automation Workflows" },
+              { n: 3, s: "+", l: "Years Experience" },
+              { n: 60, s: "+", l: "Automation Workflows" },
               { n: 50, s: "+", l: "Funnels Built" },
               { n: 10, s: "+", l: "CRM Platforms" },
             ].map((st) => (
@@ -99,7 +99,7 @@ export function About() {
         </h2>
         <div className="reveal mt-10 grid gap-6 text-base text-muted-foreground sm:text-lg md:grid-cols-2">
           <p>
-            I am Dave Vandan, a Marketing Automation &amp; CRM Developer with over 5 years of experience
+            I am Dave Vandan, a Marketing Automation &amp; CRM Developer with over 3+ years of experience
             building complete marketing ecosystems for businesses across multiple industries.
           </p>
           <p>
@@ -389,7 +389,7 @@ export function Projects() {
 const exp = [
   {
     co: "Mutant Technologies",
-    range: "2023 — Present",
+    range: "2024 — Present",
     role: "GoHighLevel & Automation Developer",
     bullets: [
       "Built advanced GHL workflows",
@@ -402,7 +402,7 @@ const exp = [
   },
   {
     co: "Technocomet Solution",
-    range: "2021 — 2023",
+    range: "2023 — 2024",
     role: "Junior CRM Designer / Developer",
     bullets: [
       "WordPress development",
