@@ -505,7 +505,7 @@ export function Contact() {
         <div className="reveal mt-12 grid gap-4 sm:grid-cols-3">
           <ContactItem icon={Phone} label="Phone" value="+91 6354589953" href="tel:+916354589953" />
           <ContactItem icon={Mail} label="Email" value="davevandan18@gmail.com" href="mailto:davevandan18@gmail.com" />
-          <ContactItem icon={MapPin} label="Location" value="Ahmedabad & Junagadh, Gujarat, India" />
+          <ContactItem icon={MapPin} label="Location" value="Ahmedabad, Gujarat, India" />
         </div>
 
         <div className="reveal mt-10 flex flex-wrap justify-center gap-3">
