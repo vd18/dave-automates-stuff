@@ -21,9 +21,9 @@ export function Hero() {
             </span>
             Available for new projects
           </div>
-          <h1 className="font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl">
-            Marketing Automation &amp; <span className="text-gradient">CRM Developer</span>
-          </h1>
+        <h1 className="font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl">
+  Dave Vandan — <span className="text-gradient">GoHighLevel & WordPress Developer</span>
+</h1>
           <p className="mt-6 max-w-xl text-base text-muted-foreground sm:text-lg">
             Helping businesses automate lead generation, client onboarding, sales pipelines, and customer
             communication through GoHighLevel, CRM systems, and custom automation solutions.
