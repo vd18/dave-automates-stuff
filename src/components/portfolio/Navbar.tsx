@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { href: "#about", label: "About" },
-  { href: "#skills", label: "Skills" },
-  { href: "#services", label: "Services" },
-  { href: "#projects", label: "Projects" },
-  { href: "#experience", label: "Experience" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#about", label: "About" },
+  { href: "/#skills", label: "Skills" },
+  { href: "/#services", label: "Services" },
+  { href: "/#projects", label: "Projects" },
+  { href: "/blog", label: "Blog" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export function Navbar() {
@@ -28,7 +28,7 @@ export function Navbar() {
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-8">
-        <a href="#top" className="flex items-center gap-2 font-display text-lg font-bold tracking-tight">
+        <a href="/#top" className="flex items-center gap-2 font-display text-lg font-bold tracking-tight">
           <span className="grid h-9 w-9 place-items-center rounded-lg bg-[image:var(--gradient-primary)] text-primary-foreground shadow-[var(--shadow-glow)]">
             D
           </span>
@@ -49,7 +49,7 @@ export function Navbar() {
         </ul>
 
         <a
-          href="#contact"
+          href="/#contact"
           className="hidden rounded-full bg-[image:var(--gradient-primary)] px-5 py-2.5 text-sm font-medium text-primary-foreground shadow-[var(--shadow-glow)] transition hover:opacity-90 md:inline-flex"
         >
           Hire Me
@@ -79,7 +79,7 @@ export function Navbar() {
               </li>
             ))}
             <a
-              href="#contact"
+              href="/#contact"
               onClick={() => setOpen(false)}
               className="mt-2 rounded-full bg-[image:var(--gradient-primary)] px-5 py-2.5 text-center text-sm font-medium text-primary-foreground"
             >
