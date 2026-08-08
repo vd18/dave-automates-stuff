@@ -9,6 +9,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Dave Vandan — GoHighLevel & WordPress Developer" },
+      { name: "google-site-verification", content: "-avROYPWtQ6gAboFTI7mreZgmGjtokhaQ7Uup2AUnik" },
       { name: "description", content: "Dave Vandan is a GoHighLevel (GHL) Expert, CRM Automation Developer, and WordPress Specialist building marketing systems that automate lead generation, onboarding, and sales pipelines." },
       { property: "og:title", content: "Dave Vandan — GoHighLevel & WordPress Developer" },
       { property: "og:description", content: "Dave Vandan — GoHighLevel, CRM automation, funnels, and WordPress. Automated growth systems for modern businesses." },
